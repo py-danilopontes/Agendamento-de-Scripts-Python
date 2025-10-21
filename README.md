@@ -26,6 +26,8 @@ Além disso, o sistema foi ajustado para utilizar o fuso horário do Brasil (`Am
 ```bash
 your_project/
 └── Automacao/
+    ├── requirements.txt
+    ├── Dockerfile
     ├── chamado_abertos.py
     ├── enviando_midia.py
     ├── mensagem_via_bancodados.py
@@ -83,4 +85,15 @@ while True:
     schedule.run_pending()
     print(f"[{now.strftime('%Y-%m-%d %H:%M:%S')}] Aguardando próxima execução...", flush=True)
     time.sleep(30)
+```
+
+
+# 🕐 Configurando o Fuso Horário
+
+Se o ambiente (servidor, container Docker, etc.) estiver configurado com o fuso UTC, o agendamento pode não rodar no horário esperado.
+Para garantir o fuso correto:
+
+- ** Adicione no arquivo Dockerfile, no nosso exemplo utilizando o fuso horário brasileiro.:
+  
+  ```export TZ="America/Sao_Paulo"```
 
