@@ -5,6 +5,9 @@ Este projeto automatiza a execução de scripts Python em horários específicos
 Neste projeto foram utilizado 4 arquivos
 O código foi configurado para:
 
+No exemplo ele executa os 2 scripts o `chamado_abertos.py` e `mensagem_via_bancodados4.py` mas por motivos de segurança não disponibilizei também esses arquivos, mas
+a idéia é demosntrar a execução chamando arquivos a partir de um arquivo principal.
+
 - Executar os scripts `chamado_abertos.py` e `enviando_midia.py` **toda segunda-feira às 06:00**.
 - Executar o script `mensagem_via_bancodados4.py` **todos os dias às 10:30**.
 
