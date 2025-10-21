@@ -2,6 +2,7 @@
 Agendamento de Scripts com Scheduler e Dockerfile
 
 Este projeto automatiza a execução de scripts Python em horários específicos utilizando a biblioteca [`schedule`](https://pypi.org/project/schedule/).
+Neste projeto foram utilizado 4 arquivos
 O código foi configurado para:
 
 - Executar os scripts `chamado_abertos.py` e `enviando_midia.py` **toda segunda-feira às 06:00**.
@@ -93,7 +94,7 @@ while True:
 Se o ambiente (servidor, container Docker, etc.) estiver configurado com o fuso UTC, o agendamento pode não rodar no horário esperado.
 Para garantir o fuso correto:
 
-- ** Adicione no arquivo Dockerfile, no nosso exemplo utilizando o fuso horário brasileiro.:
+- **Adicione no arquivo Dockerfile, no nosso exemplo utilizando o fuso horário brasileiro.:
   
-  ```export TZ="America/Sao_Paulo"```
+  ```export TZ="America/Sao_Paulo"```  
 
